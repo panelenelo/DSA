@@ -1,16 +1,9 @@
-#include "randVector.hpp"
+#include <vector>
 
 using namespace std;
 
-int main(){
+vector<int> bubblesort_me(vector<int> &toSort){
 
-    vector<int> toSort = rand_vector(5);
-
-    for(int i : toSort){
-        cout << i << endl;
-    }
-
-    cout << "------" << endl;
 
     // Bubble sort
     for(int i=0 ; i<toSort.size() ; i++){
@@ -24,15 +17,7 @@ int main(){
     }
 
 
-    for(int i : toSort){
-        cout << i << endl;
-    }
-
-    return 0;
+    return toSort;
 }
 
 
-
-
-  
-  
