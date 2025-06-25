@@ -2,10 +2,10 @@
 
 using namespace std;
 
-vector<int> bubblesort_me(vector<int> toSort){
+vector<int> heapsort_me(vector<int> toSort){
 
 
-    // Heapsort
+    // Heap sort
     
 
 
