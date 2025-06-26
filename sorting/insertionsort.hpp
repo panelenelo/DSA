@@ -10,6 +10,7 @@ vector<int> insertionsort_me(vector<int> &toSort){
     list<int>::iterator it;
 
     for(int i=0 ; i<toSort.size() ; i++){
+
         if(i==0){
             sorted.push_front(toSort[i]);
             it = sorted.begin();
@@ -17,12 +18,22 @@ vector<int> insertionsort_me(vector<int> &toSort){
             for(it=sorted.begin() ; it!=sorted.end() ; it++){
                 if(toSort[i] < *it){
                     sorted.insert(it, toSort[i]);
+                    break;
                 }
-                // Need to put a check that if it reaches the sorted.end() i have to insert it into the end
+            }
+            if(it == sorted.end()){
+                sorted.push_back(toSort[i]);
             }
         }
-    }
+    }    
 
+    toSort.clear();
+    
+    it = sorted.begin();
+    while(it!=sorted.end()){
+        toSort.push_back(*it);
+        it++;
+    }
 
     return toSort;
 }
