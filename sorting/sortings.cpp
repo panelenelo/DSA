@@ -2,6 +2,7 @@
 #include "bubblesort.hpp"
 #include "insertionsort.hpp"
 #include "heapsort.hpp"
+#include "quicksort.hpp"
 
 using namespace std;
 
