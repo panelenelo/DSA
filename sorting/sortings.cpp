@@ -3,6 +3,7 @@
 #include "insertionsort.hpp"
 #include "heapsort.hpp"
 #include "quicksort.hpp"
+#include "mergesort.hpp"
 
 using namespace std;
 
