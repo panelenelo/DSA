@@ -20,15 +20,16 @@ int main(){
     for(int i: toSort){
         cout << i << endl;
     } 
-    */
-   
+    
     list<int> lt = {2,3,4,5,6};
     list<int>::iterator it;
     it = lt.begin();
 
     cout << *it << endl;
 
+    */
+
+    cout << 3/2 << endl;
+
     return 0;
 }
-
-

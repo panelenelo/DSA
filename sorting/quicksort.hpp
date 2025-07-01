@@ -2,7 +2,7 @@
 
 using namespace std;
 
-vector<int> quicksort_me(vector<int> toSort){
+vector<int> quicksort_me(vector<int> &toSort){
 
 
     // Quick sort

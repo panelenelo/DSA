@@ -2,7 +2,7 @@
 
 using namespace std;
 
-vector<int> heapsort_me(vector<int> toSort){
+vector<int> heapsort_me(vector<int> &toSort){
 
 
     // Heap sort

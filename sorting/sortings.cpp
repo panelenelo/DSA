@@ -17,7 +17,7 @@ int main(){
 
     cout << "---------" << endl;
 
-    insertionsort_me(toSort);
+    mergesort_me(toSort);
     
     for(int i: toSort){
         cout << i << endl;
