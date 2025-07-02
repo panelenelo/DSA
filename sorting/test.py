@@ -31,16 +31,9 @@ def merge(leftarr, rightarr):
             i+=1
     
     return arr
-            
-
-
-
-
-
-
-
 
 
 arr = [1, 2, 6, 4, 7, 8, 1, 21, 55, 100, 1]
 arr = mergesort_me(arr)
 ic(arr)
+

@@ -2,6 +2,7 @@
 #include "bubblesort.hpp"
 #include "insertionsort.hpp"
 #include "heapsort.hpp"
+#include "mergesort.hpp"
 
 using namespace std;
 
@@ -27,7 +28,14 @@ int main(){
     
     cout << *it << endl;
     
-    */
+    */    
+
+    // cout << "---------" << endl;
+    // for(int i: lst){
+    //     cout << i << endl;
+    // }
+    // cout << "---------" << endl;
+    
 
     return 0;
 }

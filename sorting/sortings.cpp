@@ -9,7 +9,7 @@ using namespace std;
 
 int main(){
 
-    vector<int> toSort = rand_vector(5);
+    vector<int> toSort = rand_vector(10);
 
     for(int i: toSort){
         cout << i << endl;
@@ -18,6 +18,8 @@ int main(){
     cout << "---------" << endl;
 
     mergesort_me(toSort);
+
+    cout << "---------" << endl;
     
     for(int i: toSort){
         cout << i << endl;
