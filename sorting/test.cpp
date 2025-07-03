@@ -28,13 +28,17 @@ int main(){
     
     cout << *it << endl;
     
-    */    
+    */
 
-    // cout << "---------" << endl;
-    // for(int i: lst){
-    //     cout << i << endl;
-    // }
-    // cout << "---------" << endl;
+    list<int> lst = {2,6,4,5,6};
+    list<int>::iterator it;
+    it = lst.begin();
+
+    cout << "---------" << endl;
+    for(int i: lst){
+        cout << i << endl;
+    }
+    cout << "---------" << endl;
     
 
     return 0;
