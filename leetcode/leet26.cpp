@@ -24,17 +24,28 @@ public:
 
         return k;
     }
+
+    int removeDuplicates_Re(vector<int>& nums) {
+        int i=0;
+        for(int j=1;j<nums.size();j++){
+            if(nums[i] != nums[j]){
+                i++;
+                nums[i]=nums[j];
+            }
+        }
+        return i+1;
+    }
 };
 
 
 int main(){
-    // vector<int> nums = {0,0,1,1,1,2,2,3,3,4};
+    vector<int> nums = {0,0,1,1,1,2,2,3,3,4};
     // vector<int> nums = {0,1,2,3,4,5,6,7,8,9};
     // vector<int> nums = {0,0,0,0,0,0,0,0,0,0,0};
-    vector<int> nums = {1};
+    // vector<int> nums = {1};
     
     Solution x;
-    int k = x.removeDuplicates(nums);
+    int k = x.removeDuplicates_Re(nums);
 
     for(auto i : nums)
         cout << i << endl;
