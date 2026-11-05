@@ -40,6 +40,7 @@ int main(){
     // vector<int> nums = {0,1,2,3,4,5,6,7,8,9};
     // vector<int> nums = {0,0,0,0,0,0,0,0,0,0,0};
     // vector<int> nums = {0,1,2,2,3,0,4,2};
+    // vector<int> nums = {2,2,2,2,2,2,2,2,2,2};
     vector<int> nums = {1};
 
     int val = 2;
