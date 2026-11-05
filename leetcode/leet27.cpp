@@ -11,8 +11,15 @@ public:
         int i = 0;
         int j = nums.size()-1;
 
-        // Resolver no caso de nums.size()==1;
-        while(i<j){
+        if (nums.size() == 1){
+            if(nums[0] == val){
+                return x;
+            }else{
+                return x+1;
+            }
+        }
+
+        while(i<=j){
             if(nums[i] == val){
                 if(nums[j] == val){
                     j--;
@@ -43,7 +50,7 @@ int main(){
     // vector<int> nums = {2,2,2,2,2,2,2,2,2,2};
     vector<int> nums = {1};
 
-    int val = 2;
+    int val = 1;
 
     Solution x;
     int k = x.removeElement(nums, val);
