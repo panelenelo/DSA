@@ -11,10 +11,10 @@ public:
         int i = 0;
         int j = nums.size()-1;
 
+        // Resolver no caso de nums.size()==1;
         while(i<j){
             if(nums[i] == val){
                 if(nums[j] == val){
-                    x++;
                     j--;
                     continue;
                 }else{
@@ -24,11 +24,12 @@ public:
                     j--;
                 }
             }else{
+                x++;
                 i++;
             }
         }
 
-        return nums.size() - x;
+        return x;
     }
 };
 
@@ -38,8 +39,9 @@ int main(){
     // vector<int> nums = {0,0,1,1,1,2,2,3,3,4};
     // vector<int> nums = {0,1,2,3,4,5,6,7,8,9};
     // vector<int> nums = {0,0,0,0,0,0,0,0,0,0,0};
-    vector<int> nums = {1};
     // vector<int> nums = {0,1,2,2,3,0,4,2};
+    vector<int> nums = {1};
+
     int val = 2;
 
     Solution x;
