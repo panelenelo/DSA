@@ -11,7 +11,6 @@ public:
             return false;
                 
         vector<int> list;
-        // long int y = x;
         
         while(true){
             if(x > 9){
