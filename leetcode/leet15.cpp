@@ -8,14 +8,16 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        set<vector<int>> set_nums;
-        vector<vector<int>> results;
+        
         sort(nums.begin(), nums.end());
+        vector<vector<int>> results;
+        
         int i = 0;
         while(i<nums.size()-2){
-
-            if(i>0 && nums[i] == nums[i-1])
+            if(i>0 && nums[i] == nums[i-1]){
+                i++;
                 continue;
+            }
             if(nums[i]>0)
                 break;
 
@@ -29,15 +31,17 @@ public:
                     high--;
                     continue;
                 }else{
-                    set_nums.insert({nums[i], nums[low], nums[high]});
+                    results.push_back({nums[i], nums[low], nums[high]});
                     low++;
                     high--;
                 }
+
+                while(low<high && nums[low] == nums[low-1])
+                    low++;
+                while(high>low && nums[high] == nums[high+1])
+                    high--;
             }
             i++;        
-        }
-        for(auto i : set_nums){
-            results.push_back(i);
         }
 
         return results;
@@ -57,7 +61,6 @@ int main(){
         }
         cout << endl;
     }
-
 
     return 0;
 }
