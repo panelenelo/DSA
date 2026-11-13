@@ -8,27 +8,38 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
-        // Key is the number, value is the index in nums
-        unordered_map<int, int> map_nums;
+        set<vector<int>> set_nums;
         vector<vector<int>> results;
+        sort(nums.begin(), nums.end());
         int i = 0;
-        while(i<nums.size()-1){
-            if(!map_nums.count(nums[i]))
-                map_nums[nums[i]] = i;
+        while(i<nums.size()-2){
 
-            for(int j=i+1 ; j<nums.size() ; j++){
-                if(!map_nums.count(nums[j]))
-                    map_nums[nums[j]] = j;
+            if(i>0 && nums[i] == nums[i-1])
+                continue;
+            if(nums[i]>0)
+                break;
 
-                int x = -(i)-(j);
-                if(map_nums.count(x))
-                    results.insert(results.end(), {x, nums[i], nums[j]});
-
-                // cout << x << " " << nums[i] << " " << nums[j] << endl;
+            int low = i+1;
+            int high = nums.size()-1;
+            while(low<high){
+                if(nums[i]+nums[low]+nums[high] < 0){
+                    low++;
+                    continue;
+                }else if(nums[i]+nums[low]+nums[high] > 0){
+                    high--;
+                    continue;
+                }else{
+                    set_nums.insert({nums[i], nums[low], nums[high]});
+                    low++;
+                    high--;
+                }
             }
-            i++;
-            map_nums.clear();
+            i++;        
         }
+        for(auto i : set_nums){
+            results.push_back(i);
+        }
+
         return results;
     }
 };
